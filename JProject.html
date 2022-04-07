@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Kavya Chawla</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.6.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    #g{                       
+        letter-spacing: 3px;
+        font-size: 12px;
+    }
+    .portfolio-links{
+      height: 400px;
+    }
+</style>
+<script>
+    function tim()
+    {
+        var d=new Date().getDate();
+        // getDay() displays 0 for sunday, 1 for monday and so on
+        if (new Date().getDay()=='0')
+        {day="Sunday";}
+        else if (new Date().getDay()=='1')
+        {day="Monday";}
+        else if (new Date().getDay()=='2')
+        {day="Tuesday";}
+        else if (new Date().getDay()=='3')
+        {day="Wednesday";}
+        else if (new Date().getDay()=='4')
+        {day="Thursday";}
+        else if (new Date().getDay()=='5')
+        {day="Friday";}
+        else if (new Date().getDay()=='6')
+        {day="Saturday";}
+        var mo=new Date().getMonth()+1;
+        if (mo<10){mo='0'+mo;}
+        var yr=new Date().getFullYear();
+        var h=new Date().getHours();
+        var m=new Date().getMinutes();
+        var s=new Date().getSeconds();
+        if(h<10) {h='0'+h;}
+        if(m<10) {m='0'+m;}
+        if(s<10) {s='0'+s;}
+        var da=mo+'/'+d+'/'+yr;
+        var t=h+':'+m+':'+s;
+        document.getElementById("g").innerHTML=t+"<br>"+day+"<BR>"+da;
+        ref()
+    }
+    function ref()
+    {
+        var t1=1000;
+        myt=setTimeout('tim()',1000);
+    }
+</script>
+</head>
+
+<body onload="tim()">
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Kelly</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      <p id="g"></p>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a class="active" href="JProject.html"> JavaScript Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= JavaScipt Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>JavaScript Projects</h2>
+          <p>Here are all my JavaScript projects that I have done!!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app"> 
+                <div class="portfolio-links">
+                  <h1 id="head">Multiplication Table</h1>
+                  <br>
+                  <label for="num">Enter any number: </label>
+                  <input type="text" id="num">
+                  <br><br>
+                  <button onclick="multi()">OK</button>
+                <button onclick="Clea()">Clear</button>
+                <br>
+                  <p id="mul">
+                  </p>
+                  <script>
+                    function multi()
+                    {
+                        var n=document.getElementById("num").value;
+                        for(var i=1; i<=10; i++)
+                        {
+                            var p=n*i;
+                            document.getElementById("mul").innerHTML+=n+"x"+i+"="+p+"<br>";
+                        }
+                    }
+                    function Clea()
+                    {
+                        document.getElementById("num").value="";
+                        document.getElementById("mul").innerHTML="";
+                    }
+                  </script>
+                  <hr style="border: 4px solid black">
+                </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-links">
+                  <h1>Check the number is prime or not</h1>
+                  <br><br>
+                  <label for="num1">Enter any number: </label>
+                  <input type="text" id="num1">
+                  <br><br>
+                  <button onclick="checkp()">Check</button>
+                  <button onclick="clear2()">Clear</button>
+                  <br><br>
+                  <p id="result">
+                    <script>
+                      function checkp()
+                      {
+                          var found=true;
+                          var n=document.getElementById("num1").value;
+                          for(var a=2; a<=n/2;a++)
+                             {
+                                 if(n%a==0)
+                                 {
+                                   found=false;
+                                   break;  
+                                 }
+                             }
+                          if (found==false)
+                             document.getElementById("result").innerHTML='Not Prime';
+                          else
+                              document.getElementById("result").innerHTML='Prime';
+                      }
+                      function clear2()
+                      {
+                          document.getElementById("num1").value=" ";
+                          document.getElementById("result").innerHTML=" ";
+                      }
+                  </script>
+                  <hr style="border: 4px solid black">
+                </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-links">
+              <h1>Display the factors of a number</h1>
+              <br><br>
+              <label for="num2">Enter number: </label>
+              <input type="text" id="num2">
+              <br><br>
+              <button onclick="factors()">Display factors</button>
+              <button onclick="Clear1()">Clear</button>
+              <br><br>
+              <p id="fac"></p>
+              <script>
+                function factors()
+                {
+                    var n=document.getElementById("num2").value;
+                    for(var a=1; a<=n; a++)
+                    {
+                        if(n%a==0)
+                        document.getElementById("fac").innerHTML+=a + "<br>";
+                    }
+                }
+                function Clear1()
+                {
+                    document.getElementById("num2").value=" ";
+                    document.getElementById("fac").innerHTML=" ";
+                }
+            </script>
+            <hr style="border: 4px solid black">
+            </div>
+          </div>
+</div>
+<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-links">
+            <h1>Generating the Series of Numbers</h1>
+            <label for="first">Enter the start number</label> <input type="text" id="first">
+        
+            <label for="second">Enter the stop number</label> <input type="text" id="second">
+        
+            <label for="third">Enter the step value</label> <input type="text" id="third">
+            <br>
+            <button onclick="series()">OK</button>
+            <button onclick="clear1()">Clear</button>
+            <p id="ser"> 
+            </p>
+            <script>
+              function series()
+              {
+                  document.getElementById("ser").innerHTML="The series : <br>";
+                  var a=parseInt(document.getElementById("first").value);
+                  var b=parseInt(document.getElementById("second").value);
+                  var c=parseInt(document.getElementById("third").value);
+                  if (a<b)
+                  {
+                      for(var i=a; i<=b; i+=c)
+                      {
+                          document.getElementById("ser").innerHTML+=i + " ";
+                      }
+                  }
+              
+              else if(a>b)
+              {
+                  for(var i=a; i>=b; i-=c)
+                  {
+                      document.getElementById("ser").innerHTML+=i + " ";
+                  }
+              }
+          }
+              function clear1()
+              {
+                  document.getElementById("first").value=" ";
+                  document.getElementById("second").value=" ";
+                  document.getElementById("third").value=" ";
+                  document.getElementById("ser").innerHTML=" ";
+              }
+          </script>
+          <hr style="border: 4px solid black">
+        </div>
+    </div>
+
+  <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+    <div class="portfolio-links">
+      <h1>Sum of first n natural numbers</h1>
+    <br><br>
+    <label for="num3">Enter the last number: </label>
+    <input type="text" id="num3">
+    <br><br>
+    <button onclick="calcsum()">SUM</button>
+    <br><br>
+    <label for="sum">Sum of first n natural numbers: </label>
+    <input type="text" id="sum" disabled>
+    </div>
+    <script>
+      function calcsum()
+      {
+          var n=document.getElementById("num3").value;
+          var s=0;
+          for(var a=1; a<=n; a++)
+          {
+              s+=a;
+          }
+          document.getElementById("sum").value=s;
+      }  
+    </script>
+    <hr style="border: 4px solid black">
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <div class="portfolio-links">
+    <h1>Area and Perimeter of a rectangle using variables in Javscript</h1>
+    <label for="num4">Length</label>
+    <input type="text" value="" name="num4" id="num4">
+    <br> <br>
+    <label for="num5">Width</label>
+    <input type="text" value="" name="num5" id="num5">
+    <br> <br>
+    <button onclick="operations()">Click Me</button>
+    <button onclick="clear3()">Clear</button>
+    <br> <br>
+    <h1 id="r"> </h1> 
+    <p id="res"></p>
+  </div>
+  <script>
+    function operations()
+    {
+        var a=parseInt(document.getElementById("num4").value);
+        var b=parseInt(document.getElementById("num5").value);
+        var area=a*b;
+        var perimeter=a+a+b+b;
+        // document.getElementById("r").innerHTML="Results of Arithmetic operations are:";
+        document.getElementById("res").innerHTML="The area of "+ a +" and "+ b +" is:" + area+ "<BR>";
+        document.getElementById("res").innerHTML+="The perimeter of "+ a +" and "+ b +" is:" + perimeter+ "<BR>";
+    }
+    function clear3()
+    {
+      document.getElementById("num4").value=" ";
+      document.getElementById("num5").value=" ";
+      document.getElementById("res").innerHTML=" ";
+    }
+</script>
+<hr style="border: 4px solid black">
+</div>
+</div>
+<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <div class="portfolio-links">
+    <h1 id="calcu">Simple JavaScript Calculator</h1>
+    <table style="border: 2px solid black; text-align: center;" id="calc">
+        <tr>
+            <td colspan="4"> <input type="text" id="display" style="text-align: right;"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" name="b1" value="1" onclick="display.value +='1'"></td>
+            <td><input type="button" name="b2" value="2" onclick="display.value +='2'"></td>
+            <td><input type="button" name="b3" value="3" onclick="display.value +='3'"></td>
+            <td><input type="button" name="Add" value="+" onclick="display.value +='+'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="b4" value="4" onclick="display.value +='4'"></td>
+            <td><input type="button" name="b5" value="5" onclick="display.value +='5'"></td>
+            <td><input type="button" name="b6" value="6" onclick="display.value +='6'"></td>
+            <td><input type="button" name="Sub" value="-" onclick="display.value +='-'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="b7" value="7" onclick="display.value +='7'"></td>
+            <td><input type="button" name="b8" value="8" onclick="display.value +='8'"></td>
+            <td><input type="button" name="b9" value="9" onclick="display.value +='9'"></td>
+            <td><input type="button" name="Mul" value="x" onclick="display.value +='*'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="Clear" value="C" onclick="display.value =' '"></td>
+            <td><input type="button" name="0" value="0" onclick="display.value +='0'"></td>
+            <td><input type="button" name="Equal" value="=" onclick="display.value = eval(display.value)"></td>
+            <td><input type="button" name="Div" value="/" onclick="display.value +='/'"></td>
+        </tr>
+    </table>
+    <hr style="border: 4px solid black">
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <div class="portfolio-links">
+    <h1>Click on the button to change the image</h1>
+    <img src="appleout.jpg" alt="" id="imgapp">
+    <button id="btn1" value="Apple" onclick="change()">Apple</button>
+    <script>
+      function change()
+      {
+          var b1=document.getElementById("btn1").value;
+          if (b1=="Apple")
+          {
+              document.getElementById("imgapp").src="apple.jpg";
+              document.getElementById("btn1").value="Green Apple";
+              document.getElementById("btn1").innerHTML="Green Apple";
+          }
+          else if(b1=="Green Apple")
+          {
+              document.getElementById("imgapp").src="greenapple.jpg"
+              document.getElementById("btn1").innerHTML="Banana";
+              document.getElementById("btn1").value="Banana"
+          }
+          else if(b1=="Banana")
+          {
+              document.getElementById("imgapp").src="banana.jpg";
+              document.getElementById("btn1").innerHTML="Apple Outline";
+              document.getElementById("btn1").value="Apple Outline";
+          }
+          else if(b1=="Apple Outline")
+          {
+              document.getElementById("imgapp").src="appleout.jpg";
+              document.getElementById("btn1").innerHTML="Apple";
+              document.getElementById("btn1").value="Apple";
+          }
+         
+              
+      }
+  </script>
+    <hr style="border: 4px solid black">
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <div class="portfolio-links">
+    <h1>The amount of days in the month is:</h1>
+        <h1 id="n"></h1>
+    <select id="mo" onchange="nod()">
+       <option value="January">January</option>
+       <option value="Febuary">Febuary</option>
+       <option value="March">March</option>
+       <option value="April">April</option>
+       <option value="May">May</option>
+       <option value="June">June</option>
+       <option value="July">July</option>
+       <option value="August">August</option>
+       <option value="September">September</option>
+       <option value="October">October</option>
+       <option value="November">November</option>
+       <option value="December">December</option>
+    </select>
+    <script>
+      function nod()
+      {
+          var month=document.getElementById("mo").value;
+          var nod;
+          if(month=="January" || month=="March" || month=="May" || month=="July" || month=="August" || month=="October" || month=="December")
+          { nod=31; }
+          else if (month=="Febuary")
+          { nod=29;}
+          else
+          { nod=30; }
+
+          document.getElementById("n").innerHTML = nod;
+      }
+  </script>
+  <hr style="border: 4px solid black">
+  </div>
+  </div>
+</div>
+
+<!-- Next Row -->
+<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <div class="portfolio-links">
+    <canvas id="can" height="200" width="375" style="border:2px solid black; background-color: blanchedalmond;"></canvas>
+      <script>
+        var c=document.getElementById("can");
+        var p=c.getContext("2d");
+        var image2=new Image();
+        image2.onload=start;
+        image2.src="Picture.jpg";
+        function start(){
+          p.drawImage(image2, 125, 60, 100, 100);
+        }
+        p.fillStyle="Black";
+        p.font = "12px 'orange juice'";
+        p.fillText("Hello and Welcome to my Website!!", 100, 25);
+        p.stroke();
+      </script>
+      <hr style="border: 4px solid black">
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+<div class="portfolio-links">
+  <canvas id="c1" height="200" width="400" style="border:2px solid black;">
+  </canvas>
+  <script>
+      function draw(x,y,r,col,a)
+  {
+      b.beginPath();
+      b.arc(x, y, r,0, a*Math.PI);
+      b.fillStyle=col;
+      b.fill();
+      b.stroke();
+      x=x+180;
+  }
+  var a=document.getElementById("c1");
+  var b=a.getContext("2d");
+  draw(130, 60, 30, "black",2);
+  draw(270, 60, 30, "black",2);
+  draw(200, 100, 75, "white",2);
+  draw(160, 75, 15, "white",2);
+  draw(160, 83, 7, "black",2);
+  draw(240, 75, 15, "white",2); 
+  draw(240, 83, 7, "black",2);
+  draw(200, 125, 25, "white",1);
+  </script>
+
+<hr style="border: 4px solid black">
+</div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+<div class="portfolio-links">
+<label for="k">Enter Your Name</label>
+    <input type="text" id="k" name="na"> <br> <br>
+    <label for="f">Greeting Message</label>
+    <input type="text" id="f" name="na1" size="50" disabled> <br> <br>
+    <button onclick="disp()">Click Me</button>
+    <script>
+      function disp()
+      {
+          name=document.getElementById("k").value;
+          greeting="Hey " + name + ", Welcome To My Website!!!";
+          document.getElementById("f").value=greeting;
+      }
+  </script>
+<hr style="border: 4px solid black">
+</div>
+</div>
+</div>
+  </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kavya</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/purecounter/purecounter.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
