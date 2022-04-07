@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Kavya Chawla</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.6.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    #g{                       
+        letter-spacing: 3px;
+        font-size: 12px;
+    }
+    .portfolio-links{
+      height: 400px;
+    }
+  </style>
+  <script>
+    function tim()
+    {
+        var d=new Date().getDate();
+        // getDay() displays 0 for sunday, 1 for monday and so on
+        if (new Date().getDay()=='0')
+        {day="Sunday";}
+        else if (new Date().getDay()=='1')
+        {day="Monday";}
+        else if (new Date().getDay()=='2')
+        {day="Tuesday";}
+        else if (new Date().getDay()=='3')
+        {day="Wednesday";}
+        else if (new Date().getDay()=='4')
+        {day="Thursday";}
+        else if (new Date().getDay()=='5')
+        {day="Friday";}
+        else if (new Date().getDay()=='6')
+        {day="Saturday";}
+        var mo=new Date().getMonth()+1;
+        if (mo<10){mo='0'+mo;}
+        var yr=new Date().getFullYear();
+        var h=new Date().getHours();
+        var m=new Date().getMinutes();
+        var s=new Date().getSeconds();
+        if(h<10) {h='0'+h;}
+        if(m<10) {m='0'+m;}
+        if(s<10) {s='0'+s;}
+        var da=mo+'/'+d+'/'+yr;
+        var t=h+':'+m+':'+s;
+        document.getElementById("g").innerHTML=t+"<br>"+day+"<BR>"+da;
+        ref()
+    }
+    function ref()
+    {
+        var t1=1000;
+        myt=setTimeout('tim()',1000);
+    }
+  </script>
+  
+</head>
+<body onload="tim()">
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Kelly</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      <p id="g"></p>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="JProject.html">JavaScript Projects</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Please send a message to me anytime. I could really use your suggestions on how to improve my website!</p>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.89855198964!2d-88.21121348519173!3d41.70112568445061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880ef6f8db245fd9%3A0x37b7c0b99594f3e8!2s3115%20Kewanee%20Ln%2C%20Naperville%2C%20IL%2060564!5e0!3m2!1sen!2sus!4v1635381865487!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>3115 Kewanee Lane, Illinois, Il 60564</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>mask1849@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 630-770-0801</p>
+              </div>
+
+            </div>
+
+          </div>
+
+         <div class="col-lg-8 mt-5 mt-lg-0">
+            <!-- <form id="f1" method="POST" action="mailto:xyz@gmail.com" enctype="text/plain" autocomplete="on" target="_self">
+              <label for="fname" >Firstname </label>
+              <input type="text" name="fname" id="fn"> <br> <br>
+              <label for="lname">Lastname </label>
+              <input type="text" name="lname" id="sn"> <br> <br>
+              <label for="gender"> Gender </label> <br> <br>
+              <input type="radio" name="gender" value="Male"> Male <br>
+              <input type="radio" name="gender" value="Female">Female <br> <br>
+              <label for="remark">Remarks: </label> <br> <br>
+              <textarea rows="4" cols="50" name="remark">Enter remarks </textarea> <br> <br>
+            
+              <input type="submit">
+          
+            </form> -->
+          
+             <form action="mailto:mask1849@gmail.com?Subject=A new message from a visitor" method="post" role="form" enctype="text/plain" autocomplete="on" target="_self">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kavya</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/purecounter/purecounter.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
