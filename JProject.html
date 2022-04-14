@@ -536,6 +536,107 @@
 </div>
 </div>
 </div>
+  <!-- Last Row -->
+ <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+  <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+    <div class="portfolio-links">
+      <h1 class="sl">Slideshow</h1>
+    <div class="slides">
+        <img src="assets/img/greenapple.jpg" alt="image1">
+        <img src="assets/img/banana.jpg" alt="image2">
+        <img src="assets/img/mango.jpg" alt="image3">
+        <img src="assets/img/redapple.jpg" alt="image4">
+    </div>
+    <style>
+      .sl{
+          float: center;
+          margin: auto;
+          text-align: center;
+          background-color: azure;
+          color: blueviolet;
+          width: 50%;
+      }
+      .slides{
+          width: 400px;
+          height: 400px;
+          overflow: hidden;
+          float: center;
+          margin: auto;
+      }
+      .slides img{
+          position: absolute;
+          animation: slides 20s infinite;
+          opacity: 0;
+          width: 350px;
+          height: auto;
+          border: 2px solid red;
+      }
+      @keyframes slides{25% {opacity: 1;}
+                      40% {opacity: 0;}
+                  }
+      .slides img:nth-child(1){animation-delay:0s;}
+      .slides img:nth-child(2){animation-delay:5s;}
+      .slides img:nth-child(3){animation-delay:10s;}
+      .slides img:nth-child(4){animation-delay:15s;}
+
+  </style>
+        <hr style="border: 4px solid black">
+    </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <div class="portfolio-links" id="bgc">
+    <p>Change the Background color of the webage by choosing the color from the drop down menu</p>
+    <select id="bkc" onchange="changebgc()">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="White">White</option>
+        <option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Grey">Grey</option>
+    </select>
+    <script>
+      function changebgc()
+      {
+          var col=document.getElementById("bkc").value;
+          document.getElementById("bgc").style.backgroundColor=col;
+          if (col=='White' || col=='Yellow')
+              {
+              document.getElementById("bgc").style.color="Black";
+              }
+          else
+          {
+              document.getElementById("bgc").style.color="White";
+          }
+      }
+  </script>
+   <hr style="border: 4px solid black">
+  </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+    <div class="portfolio-links" >
+      <h1>Event Handling</h1>
+    <p>Using the events onmouseover and onmouseout to change the size of the banana.</p>
+    <img id="banana" src="assets/img/banana.jpg" onmouseover="grow()" onmouseout="shrink()">
+    <script>
+      function grow()
+      {
+          document.getElementById("banana").style.border="none";
+          document.getElementById("banana").style.height="300px";
+          document.getElementById("banana").style.boxShadow="4px 4px 4px gray";
+      }
+      function shrink()
+      {
+          document.getElementById("banana").style.border="2px solid blue";
+          // document.getElementById("banana").style.height="auto";
+          document.getElementById("banana").style.height="200px";
+          document.getElementById("banana").style.boxShadow="none";
+      }
+  </script>
+     <hr style="border: 4px solid black">
+    </div>
+    </div>
   </section><!-- End Portfolio Section -->
 
   </main><!-- End #main -->
